@@ -149,7 +149,6 @@ for (let spec in computer) {
     this also known as a test :)
 */
 
-
 /*
     ☑️ Cool, let's create our own functions, first create a function definition that...
         >> 1. takes a number, "num" as an argument
@@ -159,6 +158,16 @@ for (let spec in computer) {
     ☑️ finally, call your function with the values: 10, 25, 1235
         >> these should return: "5", "12", "617"
 */
+
+
+function divideByTwo(num) {
+    return Math.floor(num/2);
+}
+
+console.log(divideByTwo(10));
+console.log(divideByTwo(25));
+console.log(divideByTwo(1235));
+
 
 /*
     ☑️ now, create a function expression that 
@@ -170,6 +179,21 @@ for (let spec in computer) {
     ☑️ BONUS: change your fn to return the original string capitalized
         >> these should return "Hello", "World", "I love javascript"
 */
+
+function firstInitial(str) {
+    return str[0].toUpperCase();
+}
+
+function capitalize(str) {
+    return (str[0].toUpperCase() + str.slice(1));
+}
+
+console.log(firstInitial("hello"));
+console.log(capitalize("hello"));
+console.log(firstInitial("world"));
+console.log(capitalize("world"));
+console.log(firstInitial("i love javascript"));
+console.log(capitalize("i love javascript"));
 
 /*
     ☑️ Now, let's get some practice with the string methods
@@ -185,6 +209,13 @@ for (let spec in computer) {
         >> "split" the words apart into an array (should return ["i", "love", "javascript"])
 */
 
+const string = 'i love javascript';
+console.log(string.indexOf("j"));
+console.log(string.indexOf("z"));
+console.log(string.slice(7), " is ", string.slice(2, 6));
+console.log(string.replace("javascript", "HTML"));
+console.log(string.split(" "));
+
 /*
     ☑️ let's get some practice with the number methods
     ☑️ given the number 1000
@@ -192,6 +223,10 @@ for (let spec in computer) {
         >> add a dollar sign to the front of this string
         >> Use Math.max to compare your age with my age (28)
 */
+
+
+const num1000 = 1000;
+console.log("$" + num1000.toFixed(2).toString());
 
 
 /*
@@ -207,6 +242,16 @@ for (let spec in computer) {
             (remember, this DOES modify the array "in place")
 
 */
+
+
+let numArray = [ 1, 2, 3, 4 ];
+console.log(numArray.slice(2));
+numArray.push(5, 6);
+console.log(numArray);
+console.log(numArray.splice(3, 2));
+console.log(numArray.splice(4));
+console.log(numArray);
+
 
 /*
     CHAINING
@@ -238,6 +283,11 @@ for (let spec in computer) {
         cool, right?
 */
 
+
+let alphabet = "stressed";
+console.log(alphabet.split("").reverse().join(""));
+
+
 /*
     ☑️ ok, now it's your turn (for real this time)
         Chain these steps into a single line! (Don't use intermediary variables)
@@ -248,6 +298,11 @@ for (let spec in computer) {
         >> Finally, let's use DIRECT INDEXING to just get the cents (ex. "00")
 */
 
+
+let myNumber = 100;
+console.log(myNumber.toFixed(2).split(".")[1] + " cents");
+
+
 /*
     ☑️ one more, create a string, var coachName = "jan frey"...
         >> Let's split the words apart
@@ -256,6 +311,10 @@ for (let spec in computer) {
         >> Concat it, to create a string that says "F is the last initial"
         >> And finally, wrap the whole thing in a console.log!
 */
+
+var coachName = "jan frey";
+console.log(coachName.split(" ")[1][0].toLocaleUpperCase() + " is my coach's last initial.");
+
 `);
 
 
